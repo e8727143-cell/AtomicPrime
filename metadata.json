@@ -1,0 +1,6 @@
+{
+  "name": "ATOMIC PRIME | Hardcore Gym Apparel & Powerwear",
+  "description": "Ropa de gimnasio de alto rendimiento, pump covers, camisetas oversize y compresión con estética eléctrica y corte hardcore.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Teko', sans-serif;
+    --font-heading: 'Chakra Petch', sans-serif;
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #050507;
+    color: #f1f5f9;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+    letter-spacing: 0.03em;
+  }
+
+  .font-heading {
+    font-family: var(--font-heading);
+  }
+}
+
+/* Custom scrollbar for dark gym theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #090a0f;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2563eb;
+}
+
+/* Electric glow pulse */
+@keyframes electric-pulse {
+  0%, 100% {
+    opacity: 0.85;
+    box-shadow: 0 0 15px rgba(0, 140, 255, 0.4), inset 0 0 10px rgba(0, 240, 255, 0.2);
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 25px rgba(0, 200, 255, 0.8), inset 0 0 15px rgba(0, 240, 255, 0.4);
+  }
+}
+
+@keyframes lightning-flicker {
+  0%, 100% { opacity: 0; }
+  10% { opacity: 0.9; }
+  12% { opacity: 0.2; }
+  14% { opacity: 0.85; }
+  18% { opacity: 0.1; }
+  22% { opacity: 1; }
+  26% { opacity: 0; }
+}
+
+@keyframes electric-border-flow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.electric-border {
+  position: relative;
+  background: linear-gradient(60deg, #0077ff, #00f0ff, #ffffff, #0077ff);
+  background-size: 300% 300%;
+  animation: electric-border-flow 4s ease infinite;
+}
+
+.electric-glow-box {
+  animation: electric-pulse 3s infinite ease-in-out;
+}
+
+.text-stroke-electric {
+  -webkit-text-stroke: 1px rgba(0, 210, 255, 0.4);
+}
+
+.bg-grid-gym {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
